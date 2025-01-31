@@ -4,6 +4,8 @@
 
 <script>
 //coffee shop
+//app.vue --> header 
+//nav.vue --> 
 export default {
   setup() {
     return {}
@@ -12,3 +14,4 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
+

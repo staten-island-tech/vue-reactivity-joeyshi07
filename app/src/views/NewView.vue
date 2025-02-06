@@ -3,12 +3,16 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 //app.vue --> header
 //create list of albums
 // put albums on screen --> filter by genre -- computer properties?
 // shopping cart - show items
 // calculate price
 
+=======
+//coffee shop
+>>>>>>> parent of 7b5b447 (added album arrays)
 export default {
   data() {
     return {albums = [

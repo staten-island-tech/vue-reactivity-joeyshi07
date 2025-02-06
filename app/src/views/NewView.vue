@@ -1,8 +1,14 @@
 <template>
- <div> <h2 v-for="album in albums" :key="album.title" :album="album"></h2></div>
+  <div></div>
 </template>
 
-<script setup>
+<script>
+//app.vue --> header
+//create list of albums
+// put albums on screen --> filter by genre -- computer properties?
+// shopping cart - show items
+// calculate price
+
 export default {
   data() {
     return {albums = [
@@ -238,4 +244,4 @@ export default {
 }}}
 </script>
 
-<style lang="scss" scoped></style></script>
+<style lang="scss" scoped></style>

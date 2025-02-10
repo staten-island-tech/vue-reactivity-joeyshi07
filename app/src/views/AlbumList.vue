@@ -1,5 +1,10 @@
 <template>
-  <div><AlbumCard v-for="album in albums" :key="album.title" :album="album" /></div>
+  <div class="genre-buttons">
+    <button v-for="genre in genres" :key="genre" @click="" filterByGenre(genre)>{{ genre }}</button>
+  </div>
+  <div class="album-list flex flex-wrap justify-between gap-6">
+    <AlbumCard v-for="album in filteredalbums" :key="album.title" :album="album" @click="" />
+  </div>
 </template>
 
 <script>
@@ -194,7 +199,7 @@ export default {
           title: 'The Shape of Jazz to Come',
           artist: 'Ornette Coleman',
           genre: 'Jazz',
-          price: '$35.99',
+          price: 35.99,
           image:
             'https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/ShapeOfJazzToCome.jpg/220px-ShapeOfJazzToCome.jpg',
           altText:
@@ -245,7 +250,14 @@ export default {
           altText: "Mozart's 'Requiem' album cover with a classical portrait of the composer.",
         },
       ],
+      genres: ['Pop', 'Rap', 'R&B', 'Jazz', 'Classical'],
+      selectedGenre: ' ',
     }
+  },
+  computed: {
+    filteredAlbums() {
+      return this.albums.filter((album) => album.genre === this.selectedGenre)
+    },
   },
 }
 </script>

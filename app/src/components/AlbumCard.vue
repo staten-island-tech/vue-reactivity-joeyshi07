@@ -16,11 +16,6 @@
 </template>
 
 <script>
-//app.vue --> header
-//create list of albums
-// put albums on screen --> filter by genre -- computer properties?
-// shopping cart - show items
-// calculate price
 export default {
   props: {
     album: Object,

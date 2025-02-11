@@ -26,8 +26,7 @@ export default {
         artist: 'Taylor Swift',
         genre: 'Pop',
         price: 24.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Taylor_Swift_-_1989_%28Taylor%27s_Version%29.png/220px-Taylor_Swift_-_1989_%28Taylor%27s_Version%29.png',
+        image: 'https://m.media-amazon.com/images/I/81JNBy4njYL._UF1000,1000_QL80_.jpg',
         altText: "Taylor Swift's '1989' album cover, featuring a Polaroid-style photo of her.",
       },
       {
@@ -35,8 +34,7 @@ export default {
         artist: 'Dua Lipa',
         genre: 'Pop',
         price: 29.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Dua_Lipa_-_Future_Nostalgia_%28Official_Album_Cover%29.png/220px-Dua_Lipa_-_Future_Nostalgia_%28Official_Album_Cover%29.png',
+        image: 'https://m.media-amazon.com/images/I/71VQFsqlPJL._UF1000,1000_QL80_.jpg',
         altText:
           "Dua Lipa's 'Future Nostalgia' album cover featuring a dynamic photo of the artist.",
       },
@@ -45,8 +43,7 @@ export default {
         artist: 'Michael Jackson',
         genre: 'Pop',
         price: 34.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/5/55/Michael_Jackson_-_Thriller.png/220px-Michael_Jackson_-_Thriller.png',
+        image: 'https://m.media-amazon.com/images/I/81ogsUqshzL._UF1000,1000_QL80_.jpg',
         altText: "Michael Jackson's 'Thriller' album cover with a portrait of him.",
       },
       {
@@ -62,8 +59,7 @@ export default {
         artist: 'Prince',
         genre: 'Pop',
         price: 27.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Princepurplerain.jpg/220px-Princepurplerain.jpg',
+        image: 'https://m.media-amazon.com/images/I/914-C7OKHfL._UF1000,1000_QL80_.jpg',
         altText: "Prinec's purple rain",
       },
       {
@@ -71,8 +67,7 @@ export default {
         artist: 'Kendrick Lamar',
         genre: 'Rap',
         price: 34.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Kendrick_Lamar_-_To_Pimp_a_Butterfly.png/220px-Kendrick_Lamar_-_To_Pimp_a_Butterfly.png',
+        image: 'https://m.media-amazon.com/images/I/81EISNNYwAL._UF1000,1000_QL80_.jpg',
         altText:
           "Kendrick Lamar's 'To Pimp a Butterfly' album cover with a striking image of a young black man in handcuffs.",
       },
@@ -81,8 +76,7 @@ export default {
         artist: 'Kanye West',
         genre: 'Rap',
         price: 31.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Kanyewest_collegedropout.jpg/220px-Kanyewest_collegedropout.jpg',
+        image: 'https://m.media-amazon.com/images/I/7164ajA6eJS._UF1000,1000_QL80_.jpg',
         altText:
           "Kanye West's 'The College Dropout' album cover with an image of a bear mascot in a cap and gown.",
       },
@@ -91,29 +85,25 @@ export default {
         artist: 'Nas',
         genre: 'Rap',
         price: 29.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/2/27/IllmaticNas.jpg/220px-IllmaticNas.jpg',
+        image: 'https://m.media-amazon.com/images/I/41PY6KAPYVL._UF1000,1000_QL80_.jpg',
         altText:
           "Nas' 'Illmatic' album cover with a portrait of Nas from his youth against an urban backdrop.",
       },
       {
-        title: 'The Marshall Mathers LP',
+        title: 'The Slim Shady LP',
         artist: 'Eminem',
         genre: 'Rap',
-        price: 34.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/The_Marshall_Mathers_LP.jpg/220px-The_Marshall_Mathers_LP.jpg',
-        altText:
-          "Eminem's 'The Marshall Mathers LP' album cover with a photo of Eminem's childhood home.",
+        price: 33.99,
+        image: 'https://m.media-amazon.com/images/I/81Ahe2x9qBL._UF1000,1000_QL80_.jpg',
+        altText: "Eminem's 'SSLP.",
       },
       {
-        title: 'ATliens',
+        title: 'Aquemini',
         artist: 'OutKast',
         genre: 'Rap',
         price: 38.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Outkast-atliens.jpg/220px-Outkast-atliens.jpg',
-        altText: "OutKast's 'ATlien' album cover ",
+        image: 'https://m.media-amazon.com/images/I/815BM+mybsL.jpg',
+        altText: "OutKast's 'Aquemini' album cover ",
       },
       {
         title: 'Confessions',
@@ -121,7 +111,7 @@ export default {
         genre: 'R&B',
         price: 23.99,
         image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Usher_-_Confessions_album_cover.png/220px-Usher_-_Confessions_album_cover.png',
+          'https://cdn-images.dzcdn.net/images/cover/b89c20012cccb051c8a4e04d98386f95/0x1900-000000-80-0-0.jpg',
         altText: "Usher's 'Confessions' album cover with a close-up of the artist.",
       },
       {
@@ -129,8 +119,7 @@ export default {
         artist: 'Frank Ocean',
         genre: 'R&B',
         price: 28.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Channel_ORANGE.jpg/220px-Channel_ORANGE.jpg',
+        image: 'https://m.media-amazon.com/images/I/51Mp2uc8UFL._UF1000,1000_QL80_.jpg',
         altText: "Frank Ocean's 'Channel Orange' album cover with a minimalist design.",
       },
       {
@@ -138,8 +127,7 @@ export default {
         artist: "D'Angelo",
         genre: 'R&B',
         price: 27.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Voodoo_UK.jpg/220px-Voodoo_UK.jpg',
+        image: 'https://m.media-amazon.com/images/I/81n49CDOEML._UF1000,1000_QL80_.jpg',
         altText:
           "D'Angelo's 'Voodoo' album cover with a dark, atmospheric background and a close-up photo of the artist.",
       },
@@ -148,8 +136,7 @@ export default {
         artist: 'Lauryn Hill',
         genre: 'R&B',
         price: 24.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/9/99/The_Miseducation_of_Lauryn_Hill.png/220px-The_Miseducation_of_Lauryn_Hill.png',
+        image: 'https://m.media-amazon.com/images/I/81Jr6DEe02L.jpg',
         altText:
           "Lauryn Hill's 'The Miseducation of Lauryn Hill' album cover with a portrait of her.",
       },
@@ -158,8 +145,7 @@ export default {
         artist: 'Amy Winehouse',
         genre: 'R&B',
         price: 29.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Amy_Winehouse_-_Back_to_Black_%28album%29.png/220px-Amy_Winehouse_-_Back_to_Black_%28album%29.png',
+        image: 'https://m.media-amazon.com/images/I/71YhebDzEtL._UF1000,1000_QL80_.jpg',
         altText: "Amy Winehouse's 'Back to Black' album cover featuring her portrait.",
       },
       {
@@ -177,7 +163,7 @@ export default {
         genre: 'Jazz',
         price: 33.99,
         image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Kind_of_Blue_%281959%2C_CL_1355%29_album_cover.jpg/220px-Kind_of_Blue_%281959%2C_CL_1355%29_album_cover.jpg',
+          'https://cdn-p.smehost.net/sites/c5d2b1a28fd246bfafed3b8dbafc1352/wp-content/uploads/2021/05/cover-45.jpg',
         altText: "Miles Davis' 'Kind of Blue' album cover with an abstract design.",
       },
       {
@@ -185,8 +171,7 @@ export default {
         artist: 'John Coltrane',
         genre: 'Jazz',
         price: 29.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/John_Coltrane_-_A_Love_Supreme.jpg/220px-John_Coltrane_-_A_Love_Supreme.jpg',
+        image: 'https://m.media-amazon.com/images/I/61ffflzj4xL._UF1000,1000_QL80_.jpg',
         altText: "John Coltrane's 'A Love Supreme' album cover symbolizing spirituality.",
       },
       {
@@ -194,8 +179,7 @@ export default {
         artist: 'Charles Mingus',
         genre: 'Jazz',
         price: 32.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Mingus_Ah_Um_-_Charles_Mingus.jpg/220px-Mingus_Ah_Um_-_Charles_Mingus.jpg',
+        image: 'https://m.media-amazon.com/images/I/81DmDMv-VzL._UF1000,1000_QL80_.jpg',
         altText: "Charles Mingus' 'Mingus Ah Um' album cover with a drawing of Mingus.",
       },
       {
@@ -203,8 +187,7 @@ export default {
         artist: 'The Dave Brubeck Quartet',
         genre: 'Jazz',
         price: 24.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Time_out_album_cover.jpg/220px-Time_out_album_cover.jpg',
+        image: 'https://m.media-amazon.com/images/I/81tHyH2mfuL._UF1000,1000_QL80_.jpg',
         altText:
           "The Dave Brubeck Quartet's 'Time Out' album cover with abstract geometric patterns.",
       },
@@ -213,8 +196,7 @@ export default {
         artist: 'Ornette Coleman',
         genre: 'Jazz',
         price: 35.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/ShapeOfJazzToCome.jpg/220px-ShapeOfJazzToCome.jpg',
+        image: 'https://m.media-amazon.com/images/I/81PEYjHNCJL.jpg',
         altText:
           "Ornette Coleman's 'The Shape of Jazz to Come' album cover with an abstract design.",
       },
@@ -275,8 +257,7 @@ export default {
         artist: 'Nirvana',
         genre: 'Rock',
         price: 30.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/NirvanaNevermindalbumcover.jpg/220px-NirvanaNevermindalbumcover.jpg',
+        image: 'https://m.media-amazon.com/images/I/61ZhsEYnSdL.jpg',
         altText:
           "Nirvana's 'Nevermind' album cover featuring a baby swimming toward a dollar bill.",
       },
@@ -285,8 +266,7 @@ export default {
         artist: 'Pink Floyd',
         genre: 'Rock',
         price: 32.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png',
+        image: 'https://m.media-amazon.com/images/I/61hw9WloObL._UF1000,1000_QL80_.jpg',
         altText:
           "Pink Floyd's 'The Dark Side of the Moon' album cover featuring a prism and light spectrum.",
       },
@@ -295,8 +275,7 @@ export default {
         artist: 'Eagles',
         genre: 'Rock',
         price: 29.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Hotelcalifornia.jpg/220px-Hotelcalifornia.jpg',
+        image: 'https://m.media-amazon.com/images/I/71rYYgYnr2L.jpg',
         altText: "Eagles' 'Hotel California' album cover featuring a sunset and hotel exterior.",
       },
       {
@@ -304,8 +283,7 @@ export default {
         artist: 'Led Zeppelin',
         genre: 'Rock',
         price: 31.99,
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg/220px-Led_Zeppelin_-_Led_Zeppelin_IV.jpg',
+        image: 'https://m.media-amazon.com/images/I/81x364UAGAL.jpg',
         altText:
           "Led Zeppelin's 'IV' album cover featuring an old painting of a man carrying sticks.",
       },

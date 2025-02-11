@@ -8,7 +8,7 @@
       <img
         :src="album.image"
         :alt="album.altText"
-        class="w-80 shadow-md shadow-slate-400 w-full aspect-square object-cover m-4"
+        class="w-80 shadow-md shadow-slate-400 aspect-square object-cover m-4"
       />
       <h3 class="album-price">{{ album.price }}</h3>
     </div>

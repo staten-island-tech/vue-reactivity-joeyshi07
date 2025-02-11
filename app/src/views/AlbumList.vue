@@ -1,18 +1,18 @@
 <template>
-  <div class="genre-buttons">
-    <button v-for="genre in genres" :key="genre" @click="selectedGenre = genre">
+  <div class="flex flex-wrap">
+    <button
+      v-for="genre in genres"
+      :key="genre"
+      @click="selectedGenre = genre"
+      class="px-4 py-2 bg-slate-200"
+    >
       {{ genre }}
     </button>
-    <button @click="selectedGenre = null">All</button>
+    <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200">All</button>
   </div>
 
   <div class="album-list flex flex-wrap justify-between gap-6">
-    <AlbumCard
-      v-for="album in filteredAlbums"
-      :key="album.title"
-      :album="album"
-      @click="addToCart(album)"
-    />
+    <AlbumCard v-for="album in filteredAlbums" :key="album.title" :album="album" />
   </div>
 </template>
 

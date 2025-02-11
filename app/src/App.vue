@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import AlbumList from '@/components/AlbumList.vue'
+import AlbumList from '@/views/AlbumList.vue'
 import ShoppingCart from '@/components/ShoppingCart.vue'
 </script>
 

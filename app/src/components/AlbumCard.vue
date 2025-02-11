@@ -20,6 +20,9 @@ export default {
   props: {
     album: Object,
   },
+  // methods: {
+  //    this.$emit('add-to-cart', this.album)
+  // }
 }
 </script>
 

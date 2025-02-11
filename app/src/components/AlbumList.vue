@@ -7,7 +7,13 @@
   </div>
 
   <div class="album-list flex flex-wrap justify-between gap-6">
-    <AlbumCard v-for="album in filteredAlbums" :key="album.title" :album="album" @click="addToCart(album)  /></div>
+    <AlbumCard
+      v-for="album in filteredAlbums"
+      :key="album.title"
+      :album="album"
+      @click="addToCart(album)"
+    />
+  </div>
 </template>
 
 <script>

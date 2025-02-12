@@ -8,7 +8,7 @@
       <img
         :src="album.image"
         :alt="album.altText"
-        class="w-full shadow-md shadow-slate-400 aspect-square object-cover m-4"
+        class="w-80 shadow-md shadow-slate-400 aspect-square object-cover m-4"
       />
       <h3 class="album-price">{{ album.price }}</h3>
       <button
@@ -26,9 +26,6 @@ export default {
   props: {
     album: Object,
   },
-  // methods: {
-  //    this.$emit('add-to-cart', this.album)
-  // }
 }
 </script>
 

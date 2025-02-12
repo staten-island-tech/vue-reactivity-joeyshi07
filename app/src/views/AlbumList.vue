@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 gap-4">
+  <div class="p-4 gap-4 items-center">
     <button
       v-for="genre in genres"
       :key="genre"
@@ -11,9 +11,7 @@
     <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200">All</button>
   </div>
 
-  <div
-    class="album-list grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6 justify-items-center"
-  >
+  <div class="album-list flex flex-wrap gap-6 p-6 items-center justify-items-center">
     <AlbumCard
       v-for="album in filteredAlbums"
       :key="album.title"
@@ -24,10 +22,16 @@
   <div>
     <ShoppingCart :cartItems="cart" />
   </div>
+  <div class="p-4 mt-4">
+    <h3>Total Cost: ${{ totalCost.toFixed(2) }}</h3>
+  </div>
+  <div>
+    <h3>Items in Cart: {{ numberItems }}</h3>
+  </div>
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import AlbumCard from '@/components/AlbumCard.vue'
 import ShoppingCart from '@/components/ShoppingCart.vue'
 
@@ -317,9 +321,23 @@ export default {
       }
       return albums.value.filter((album) => album.genre === selectedGenre.value)
     })
+
+    const totalCost = computed(() => {
+      let total = 0
+      cart.value.forEach((item) => {
+        total += item.price
+      })
+      return total
+    })
+
+    const numberItems = computed(() => {
+      return cart.value.length
+    })
+
     const addToCart = (album) => {
       cart.value.push({ title: album.title, artist: album.artist, price: album.price })
     }
+
     return {
       albums,
       selectedGenre,
@@ -327,6 +345,8 @@ export default {
       filteredAlbums,
       cart,
       addToCart,
+      totalCost,
+      numberItems,
     }
   },
 }

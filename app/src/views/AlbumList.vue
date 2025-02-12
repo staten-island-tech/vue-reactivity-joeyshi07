@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap">
+  <div class="p-4 gap-4">
     <button
       v-for="genre in genres"
       :key="genre"
@@ -11,7 +11,9 @@
     <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200">All</button>
   </div>
 
-  <div class="album-list flex flex-wrap justify-between gap-6">
+  <div
+    class="album-list grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6 justify-items-center"
+  >
     <AlbumCard
       v-for="album in filteredAlbums"
       :key="album.title"

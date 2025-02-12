@@ -11,6 +11,12 @@
         class="w-80 shadow-md shadow-slate-400 aspect-square object-cover m-4"
       />
       <h3 class="album-price">{{ album.price }}</h3>
+      <button
+        @click="$emit('add-to-cart', album)"
+        class="px-4 py-2 bg-blue-500 text-white rounded-md mt-2"
+      >
+        Add to Cart
+      </button>
     </div>
   </div>
 </template>

@@ -12,17 +12,27 @@
   </div>
 
   <div class="album-list flex flex-wrap justify-between gap-6">
-    <AlbumCard v-for="album in filteredAlbums" :key="album.title" :album="album" />
+    <AlbumCard
+      v-for="album in filteredAlbums"
+      :key="album.title"
+      :album="album"
+      @add-to-cart="addToCart"
+    />
+  </div>
+  <div>
+    <ShoppingCart :cartItems="cart" />
   </div>
 </template>
 
 <script>
 import { ref, computed } from 'vue'
 import AlbumCard from '@/components/AlbumCard.vue'
+import ShoppingCart from '@/components/ShoppingCart.vue'
 
 export default {
   components: {
     AlbumCard,
+    ShoppingCart,
   },
   setup() {
     const albums = ref([
@@ -295,6 +305,7 @@ export default {
     ])
 
     const selectedGenre = ref(null)
+    const cart = ref([])
 
     const genres = ['Pop', 'Rap', 'R&B', 'Jazz', 'Classical', 'Rock']
 
@@ -304,15 +315,31 @@ export default {
       }
       return albums.value.filter((album) => album.genre === selectedGenre.value)
     })
-
+    const addToCart = (album) => {
+      cart.value.push({ title: album.title, artist: album.artist, price: album.price })
+    }
     return {
       albums,
       selectedGenre,
       genres,
       filteredAlbums,
+      cart,
+      addToCart,
     }
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.shopping-cart {
+  width: 25%;
+  height: 100vh;
+  background-color: #95aad5;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+</style>

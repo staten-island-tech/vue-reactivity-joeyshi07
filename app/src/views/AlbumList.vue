@@ -1,37 +1,53 @@
 <template>
-  <div class="p-4 gap-4 items-center">
-    <button
-      v-for="genre in genres"
-      :key="genre"
-      @click="selectedGenre = genre"
-      class="px-4 py-2 bg-slate-200"
-    >
-      {{ genre }}
-    </button>
-    <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200">All</button>
-  </div>
+  <div class="flex justify-between p-6">
+    <div class="flex flex-col items-center w-4/5">
+      <h1 class="">Record Store</h1>
+      <div class="p-4 gap-4 items-center flex justify-center w-full mb-6">
+        <button
+          v-for="genre in genres"
+          :key="genre"
+          @click="selectedGenre = genre"
+          class="px-4 py-2 bg-slate-200 text-sm"
+        >
+          {{ genre }}
+        </button>
+        <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200 text-sm">All</button>
+      </div>
 
-  <div class="album-list flex flex-wrap gap-6 p-6 items-center justify-items-center">
-    <AlbumCard
-      v-for="album in filteredAlbums"
-      :key="album.title"
-      :album="album"
-      @add-to-cart="addToCart"
-    />
-  </div>
-  <div>
-    <ShoppingCart :cartItems="cart" />
-  </div>
-  <div class="p-4 mt-4">
-    <h3>Total Cost: ${{ totalCost.toFixed(2) }}</h3>
-  </div>
-  <div>
-    <h3>Items in Cart: {{ numberItems }}</h3>
+      <div>
+        <AlbumCard
+          v-for="album in filteredAlbums"
+          :key="album.title"
+          :album="album"
+          @add-to-cart="addToCart"
+        />
+      </div>
+    </div>
+
+    <div
+      class="shopping-cart bg-gray-100 p-4 w-1/5 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
+    >
+      <h2 class="text-lg font-bold mb-4">Shopping Cart</h2>
+      <div class="cart-items mb-4">
+        <ul v-if="cart.length">
+          <li v-for="(item, index) in cart" :key="index" class="flex justify-between p-2 border-b">
+            <span>{{ item.title }} by {{ item.artist }}</span>
+            <span>${{ item.price }}</span>
+          </li>
+        </ul>
+        <p v-else class="text-gray-500">Your cart is empty.</p>
+      </div>
+      <div class="total-cost">
+        <input type="text" />
+        <h3 class="font-semibold">Items in Cart: {{ numberItems }}</h3>
+        <h3 class="font-semibold mt-2">Total Cost: ${{ totalCost.toFixed(2) }}</h3>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue'
+import { ref, computed } from 'vue'
 import AlbumCard from '@/components/AlbumCard.vue'
 import ShoppingCart from '@/components/ShoppingCart.vue'
 
@@ -353,7 +369,7 @@ export default {
 </script>
 
 <style scoped>
-.shopping-cart {
+/* .shopping-cart {
   width: 25%;
   height: 100vh;
   background-color: #95aad5;
@@ -363,5 +379,5 @@ export default {
   top: 0;
   overflow-y: auto;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-}
+} */
 </style>

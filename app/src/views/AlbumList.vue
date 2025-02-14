@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between p-6">
+  <div class="flex justify-between p-6 w-full">
     <div class="flex flex-col items-center w-4/5">
       <h1 class="">Record Store</h1>
       <div class="p-4 gap-4 items-center flex justify-center w-full mb-6">

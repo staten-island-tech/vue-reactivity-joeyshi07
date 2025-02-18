@@ -14,7 +14,7 @@
         <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200 text-sm">All</button>
       </div>
 
-      <div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
         <AlbumCard
           v-for="album in filteredAlbums"
           :key="album.title"
@@ -368,16 +368,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* .shopping-cart {
-  width: 25%;
-  height: 100vh;
-  background-color: #95aad5;
-  padding: 1rem;
-  position: fixed;
-  right: 0;
-  top: 0;
-  overflow-y: auto;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-} */
-</style>
+<style scoped></style>

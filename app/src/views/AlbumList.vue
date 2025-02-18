@@ -1,20 +1,27 @@
 <template>
-  <div class="flex justify-between p-6 w-full">
-    <div class="flex flex-col items-center w-4/5">
-      <h1 class="">Record Store</h1>
+  <div class="flex p-6 w-screen bg-sage">
+    <div class="flex flex-col p-4 w-4/5">
+      <h1 class="text-soil">Record Store</h1>
       <div class="p-4 gap-4 items-center flex justify-center w-full mb-6">
+        <button
+          @click="selectedGenre = null"
+          class="px-4 py-2 bg-olive text-sm text-white shadow-md rounded-md"
+        >
+          All
+        </button>
         <button
           v-for="genre in genres"
           :key="genre"
           @click="selectedGenre = genre"
-          class="px-4 py-2 bg-slate-200 text-sm"
+          class="px-4 py-2 bg-olive text-sm text-white rounded-md"
         >
           {{ genre }}
         </button>
-        <button @click="selectedGenre = null" class="px-4 py-2 bg-slate-200 text-sm">All</button>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full"
+      >
         <AlbumCard
           v-for="album in filteredAlbums"
           :key="album.title"
@@ -25,17 +32,11 @@
     </div>
 
     <div
-      class="shopping-cart bg-gray-100 p-4 w-1/5 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
+      class="shopping-cart bg-neutral p-4 w-1/5 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
     >
-      <h2 class="text-lg font-bold mb-4">Shopping Cart</h2>
+      <h2 class="text-lg font-bold mb-4 text-soil">Shopping Cart</h2>
       <div class="cart-items mb-4">
-        <ul v-if="cart.length">
-          <li v-for="(item, index) in cart" :key="index" class="flex justify-between p-2 border-b">
-            <span>{{ item.title }} by {{ item.artist }}</span>
-            <span>${{ item.price }}</span>
-          </li>
-        </ul>
-        <p v-else class="text-gray-500">Your cart is empty.</p>
+        <ShoppingCart :cartItems="cart" :totalCost="totalCost" :numberItems="numberItems" />
       </div>
       <div class="total-cost">
         <input type="text" />

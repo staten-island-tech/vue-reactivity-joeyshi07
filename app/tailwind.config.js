@@ -10,6 +10,10 @@ export default {
         beige: '#bab6a8',
         neutral: '#F1F2EB',
       },
+      fontFamily: {
+        sans: ['DM Sans', 'sans'],
+        title: ['Aoboshi One', 'title'],
+      },
     },
   },
   plugins: [],

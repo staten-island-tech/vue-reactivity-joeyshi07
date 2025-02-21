@@ -1,11 +1,11 @@
 <template>
   <div class="flex p-6 w-screen bg-sage">
     <div class="flex flex-col p-4 w-4/5">
-      <h1 class="text-soil">Record Store</h1>
+      <h1 class="text-soil text-4xl font-title">RECORD STORE</h1>
       <div class="p-4 gap-4 items-center flex justify-center w-full mb-6">
         <button
           @click="selectedGenre = null"
-          class="px-4 py-2 bg-olive text-sm text-white shadow-md rounded-md"
+          class="px-4 py-2 bg-olive text-xl font-sans text-white shadow-md rounded-md"
         >
           All
         </button>
@@ -13,7 +13,7 @@
           v-for="genre in genres"
           :key="genre"
           @click="selectedGenre = genre"
-          class="px-4 py-2 bg-olive text-sm text-white rounded-md"
+          class="px-4 py-2 bg-olive text-xl font-sans text-white rounded-md"
         >
           {{ genre }}
         </button>
@@ -37,11 +37,6 @@
       <h2 class="text-lg font-bold mb-4 text-soil">Shopping Cart</h2>
       <div class="cart-items mb-4">
         <ShoppingCart :cartItems="cart" :totalCost="totalCost" :numberItems="numberItems" />
-      </div>
-      <div class="total-cost">
-        <input type="text" />
-        <h3 class="font-semibold">Items in Cart: {{ numberItems }}</h3>
-        <h3 class="font-semibold mt-2">Total Cost: ${{ totalCost.toFixed(2) }}</h3>
       </div>
     </div>
   </div>

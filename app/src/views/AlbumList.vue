@@ -1,8 +1,8 @@
 <template>
   <div class="flex p-6 w-screen bg-sage">
-    <div class="flex flex-col p-4 w-4/5">
-      <h1 class="text-soil text-4xl font-title">RECORD STORE</h1>
-      <div class="p-4 gap-4 items-center flex justify-center w-full mb-6">
+    <div class="flex flex-col p-4 w-3/4">
+      <span><h1 class="text-soil text-7xl font-title">RECORD STORE</h1></span>
+      <div class="p-4 gap-4 items-center flex justify-center w-full mt-3 mb-6">
         <button
           @click="selectedGenre = null"
           class="px-4 py-2 bg-olive text-xl font-sans text-white shadow-md rounded-md"
@@ -32,11 +32,18 @@
     </div>
 
     <div
-      class="shopping-cart bg-neutral p-4 w-1/5 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
+      class="shopping-cart bg-neutral p-4 w-1/4 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
     >
-      <h2 class="text-lg font-bold mb-4 text-soil">Shopping Cart</h2>
+      <h2 class="font-bold text-2xl mb-0.5 text-soil">Shopping Cart</h2>
+      <h3 class="text-md text-soil mb-4">Click X to remove</h3>
       <div class="cart-items mb-4">
-        <ShoppingCart :cartItems="cart" :totalCost="totalCost" :numberItems="numberItems" />
+        <ShoppingCart
+          :cartItems="cart"
+          @remove-one="removeOne"
+          :totalCost="totalCost"
+          :numberItems="numberItems"
+          @remove-all="removeAll"
+        />
       </div>
     </div>
   </div>
@@ -350,6 +357,14 @@ export default {
       cart.value.push({ title: album.title, artist: album.artist, price: album.price })
     }
 
+    const removeOne = (index) => {
+      cart.value.splice(index, 1)
+    }
+
+    const removeAll = (album) => {
+      cart.value = []
+    }
+
     return {
       albums,
       selectedGenre,
@@ -359,6 +374,8 @@ export default {
       addToCart,
       totalCost,
       numberItems,
+      removeAll,
+      removeOne,
     }
   },
 }

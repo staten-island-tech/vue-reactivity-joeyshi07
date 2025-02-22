@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="album-card flex flex-col items-center bg-neutral rounded-lg shadow-lg p-6 m-3 border-solid border border-beige shadow-olive transition-transform hover:scale-105"
+      class="album-card flex font-sans flex-col items-center bg-neutral rounded-lg shadow-lg p-6 m-3 border-solid border border-beige shadow-olive transition-transform hover:scale-105"
     >
       <h2 class="album-title text-soil text-xl">{{ album.title }}</h2>
       <h3 class="album-artist text-soil text-lg">{{ album.artist }}</h3>

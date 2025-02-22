@@ -32,9 +32,9 @@
     </div>
 
     <div
-      class="shopping-cart bg-neutral p-4 w-1/4 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
+      class="shopping-cart bg-neutral p-6 w-1/4 h-full fixed right-0 top-0 overflow-y-auto shadow-lg"
     >
-      <h2 class="font-bold text-2xl mb-0.5 text-soil">Shopping Cart</h2>
+      <h2 class="font-bold text-2xl mb-0.5 mt-5 text-soil">Shopping Cart</h2>
       <h3 class="text-md text-soil mb-4">Click X to remove</h3>
       <div class="cart-items mb-4">
         <ShoppingCart

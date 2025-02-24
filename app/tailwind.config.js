@@ -7,7 +7,7 @@ export default {
         soil: '#4A4A48',
         olive: '#566246',
         sage: '#A4C2A5',
-        beige: '#bab6a8',
+        beige: '#BAB6A8',
         neutral: '#F1F2EB',
       },
       fontFamily: {

@@ -1,17 +1,18 @@
 <template>
   <div class="bg-white p-4 w-full h-full text-soil font-sans">
-    <!-- <span
+    <span
       ><input
         type="text"
+        v-model="promoCode"
         class="border border-beige rounded-sm p-1 m-3 text-soil"
         placeholder="Enter Promo Code"
     /></span>
     <span
-      ><button @click="$emit('promo-code')" class="p-1 bg-sage rounded-sm text-soil">
+      ><button @click="handlePromoCode" class="p-1 bg-sage rounded-sm text-soil">
         Enter
       </button></span
     >
-    <p class="text-red-500 mt-2">{{ discountMessage }}</p> -->
+    <p class="text-red-500">{{ discountMessage }}</p>
     <ul v-if="cartItems.length">
       <li
         v-for="(item, index) in cartItems"
@@ -31,7 +32,7 @@
 
     <div class="mt-4">
       <h3 class="font-semibold mt-2">Items in Cart: {{ numberItems }}</h3>
-      <h3 class="font-semibold mt-2">Total Cost: ${{ totalCost.toFixed(2) }}</h3>
+      <h3 class="font-semibold mt-2">Total Cost: ${{ discountedCost.toFixed(2) }}</h3>
       <button @click="$emit('remove-all', album)" class="mt-4 p-2 bg-sage rounded-sm text-soil">
         Remove All
       </button>
@@ -40,11 +41,26 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
   props: {
     cartItems: Array,
-    totalCost: Number,
+    discountedCost: Number,
     numberItems: Number,
+    discountMessage: String,
+  },
+  setup(props, { emit }) {
+    const promoCode = ref('')
+
+    const handlePromoCode = () => {
+      emit('apply-promo', promoCode.value)
+    }
+
+    return {
+      promoCode,
+      handlePromoCode,
+    }
   },
 }
 </script>

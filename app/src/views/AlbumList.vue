@@ -40,9 +40,11 @@
         <ShoppingCart
           :cartItems="cart"
           @remove-one="removeOne"
-          :totalCost="totalCost"
+          :discountedCost="discountedCost"
           :numberItems="numberItems"
           @remove-all="removeAll"
+          @apply-promo="applyPromo"
+          :discountMessage="discountMessage"
         />
       </div>
     </div>
@@ -331,6 +333,8 @@ export default {
 
     const selectedGenre = ref(null)
     const cart = ref([])
+    const discount = ref(0)
+    const discountMessage = ref('')
 
     const genres = ['Pop', 'Rap', 'R&B', 'Jazz', 'Classical', 'Rock']
 
@@ -349,6 +353,10 @@ export default {
       return total
     })
 
+    const discountedCost = computed(() => {
+      return totalCost.value * (1 - discount.value)
+    })
+
     const numberItems = computed(() => {
       return cart.value.length
     })
@@ -365,6 +373,16 @@ export default {
       cart.value = []
     }
 
+    const applyPromo = (promoCode) => {
+      if (promoCode === 'SITHSSTUDENT') {
+        discount.value = 0.2
+        discountMessage.value = 'Discount Applied!'
+      } else {
+        discount.value = 0
+        discountMessage.value = 'Code Invalid'
+      }
+    }
+
     return {
       albums,
       selectedGenre,
@@ -373,9 +391,12 @@ export default {
       cart,
       addToCart,
       totalCost,
+      discountedCost,
       numberItems,
       removeAll,
       removeOne,
+      applyPromo,
+      discountMessage,
     }
   },
 }
